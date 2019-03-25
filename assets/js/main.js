@@ -24,43 +24,6 @@ function play() {
     }
 }
 
-// Gets audio file duration
-music.addEventListener("canplaythrough", function() {
-    duration = music.duration;
-}, false);
-
-// Countdown
-music.addEventListener("timeupdate", function() {
-    var timeleft = document.getElementById('timeleft'),
-        duration = parseInt( music.duration ),
-        currentTime = parseInt( music.currentTime ),
-        timeLeft = duration - currentTime,
-        s, m;
-
-
-    s = timeLeft % 60;
-    m = Math.floor( timeLeft / 60 ) % 60;
-
-    s = s < 10 ? "0"+s : s;
-    m = m < 10 ? "0"+m : m;
-
-    timeleft.innerHTML = m+":"+s;
-
-}, false);
-
-// Countup
-music.addEventListener("timeupdate", function() {
-    var timeline = document.getElementById('duration');
-    var s = parseInt(music.currentTime % 60);
-    var m = parseInt((music.currentTime / 60) % 60);
-    if (s < 10) {
-        timeline.innerHTML = m + ':0' + s;
-    }
-    else {
-        timeline.innerHTML = m + ':' + s;
-    }
-}, false);
-
 // getPosition
 // Returns elements left position relative to top-left of viewport
 function getPosition(el) {
