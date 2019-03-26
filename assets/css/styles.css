@@ -1,7 +1,19 @@
+#div{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+#wrapper{
+	display: flex;
+	height: auto;
+}
+
 #audioplayer{
 	width: 480px;
 	height: 60px;
-	margin: 50px auto auto auto;
 }
 
 #pButton{

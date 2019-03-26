@@ -1,23 +1,21 @@
-var music = document.getElementById('music'); // id for audio element
-var duration = music.duration; // Duration of audio clip, calculated here for embedding purposes
+var track = document.getElementById('track'); // id for audio element
+var duration = track.duration; // Duration of audio clip, calculated here for embedding purposes
+var currentTime = track.currentTime;
 var pButton = document.getElementById('pButton'); // play button
 
 // play button event listenter
 pButton.addEventListener("click", play);
 
-// timeupdate event listener
-music.addEventListener("timeupdate", timeUpdate, false);
-
 //Play and Pause
 function play() {
     // start music
-    if (music.paused) {
-        music.play();
+    if (track.paused) {
+        track.play();
         // remove play, add pause
         pButton.className = "";
         pButton.className = "pause";
     } else { // pause music
-        music.pause();
+        track.pause();
         // remove pause, add play
         pButton.className = "";
         pButton.className = "play";
