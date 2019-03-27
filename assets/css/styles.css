@@ -1,14 +1,13 @@
-#div{
+div{
 	position: relative;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+	align-items: center;
 }
 
 #wrapper{
+	margin: 0;
+	padding: 0;
+	border: 0;
 	display: flex;
-	height: auto;
 }
 
 #audioplayer{
