@@ -1,6 +1,7 @@
 div{
 	position: relative;
 	align-items: center;
+	font-family: 'Work Sans', sans-serif;
 }
 
 #wrapper{
@@ -21,9 +22,27 @@ div{
     background-size: 50% 50%;
     background-repeat: no-repeat;
     background-position: center;
+		background:transparent;
     float:left;
     outline:none;
 }
 
-.play{background: url('http://www.alexkatz.me/codepen/img/play.png') ;}
+.play::before {
+  font-family: 'FontAwesome';
+	font-size: 5em;
+  top: 0;
+  left: 0;
+  content: "\f144";
+	border-radius: 50%;
+}
+
+.pause::before {
+  font-family: 'FontAwesome';
+	font-size: 5em;
+  top: 0;
+  left: 0;
+  content: "\f28b";
+	border-radius: 50%;
+}
+
 .pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
