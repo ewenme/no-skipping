@@ -1,7 +1,7 @@
 var track = document.getElementById('track'); // id for audio element
-var duration = track.duration; // Duration of audio clip, calculated here for embedding purposes
-var currentTime = track.currentTime;
 var pButton = document.getElementById('pButton'); // play button
+var timeElapsed = document.getElementById('timeElapsed');
+var duration = document.getElementById('duration');
 
 // play button event listenter
 pButton.addEventListener("click", play);
@@ -20,6 +20,24 @@ function play() {
         pButton.className = "";
         pButton.className = "play";
     }
+}
+
+// current time elapsed
+setInterval(function() {
+    timeElapsed.textContent = formatTime(track.currentTime);
+}, 100);
+
+// duration
+duration.innerHTML = formatTime(track.duration);
+
+// nicer time formating
+function formatTime(s, m) {
+    s = Math.floor( s );
+    m = Math.floor( s / 60 );
+    m = m >= 10 ? m : '0' + m;
+    s = Math.floor( s % 60 );
+    s = s >= 10 ? s : '0' + s;
+    return m + ':' + s;
 }
 
 // getPosition
