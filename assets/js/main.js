@@ -1,12 +1,12 @@
 var track = document.getElementById('track'); // id for audio element
 var pButton = document.getElementById('pButton'); // play button
-var timeElapsed = document.getElementById('timeElapsed');
-var duration = document.getElementById('duration');
+var timeElapsed = document.getElementById('timeElapsed'); // elapsed time
+var duration = document.getElementById('duration'); // track duration
 
 // play button event listenter
 pButton.addEventListener("click", play);
 
-//Play and Pause
+// Play and Pause
 function play() {
     // start music
     if (track.paused) {
