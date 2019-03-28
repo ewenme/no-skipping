@@ -17,7 +17,6 @@ div{
 
 #pButton{
     height:60px;
-    width: 60px;
     border: none;
     background-size: 50% 50%;
     background-repeat: no-repeat;
@@ -29,7 +28,8 @@ div{
 
 .play::before {
   font-family: 'FontAwesome';
-	font-size: 4em;
+	font-size: 3em;
+	color: black;
   top: 0;
   left: 0;
   content: "\f144";
@@ -38,7 +38,8 @@ div{
 
 .pause::before {
   font-family: 'FontAwesome';
-	font-size: 4em;
+	font-size: 3em;
+	color: black;
   top: 0;
   left: 0;
   content: "\f28b";
@@ -46,12 +47,14 @@ div{
 }
 
 .dl::before {
+	height: 60px;
+	width: 60px;
   font-family: 'FontAwesome';
-	font-size: 4em;
-  top: 0;
+	font-size: 2em;
+	color: black;
+	top: 0;
   left: 0;
-  content: "\f28b";
+  margin-left: 10px;
+  content: "\f0c7";
 	border-radius: 50%;
 }
-
-.pause{background: url('http://www.alexkatz.me/codepen/img/pause.png') ;}
