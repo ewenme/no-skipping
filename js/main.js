@@ -13,12 +13,12 @@ function play() {
         track.play();
         // remove play, add pause
         pButton.className = "";
-        pButton.className = "pause";
+        pButton.className = "fa fa-pause-circle-o fa-2x";
     } else { // pause music
         track.pause();
         // remove pause, add play
         pButton.className = "";
-        pButton.className = "play";
+        pButton.className = "fa fa-play-circle-o fa-2x";
     }
 }
 
@@ -28,7 +28,15 @@ setInterval(function() {
 }, 100);
 
 // duration
-duration.innerHTML = formatTime(track.duration);
+function runWhenLoaded() {
+  duration.innerHTML = formatTime(track.duration);
+
+}
+if (!track.readyState) {
+    track.addEventListener("loadedmetadata", runWhenLoaded);
+} else {
+    runWhenLoaded.call(track);
+}
 
 // nicer time formating
 function formatTime(s, m) {

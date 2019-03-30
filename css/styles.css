@@ -1,0 +1,36 @@
+div{
+	position: relative;
+	align-items: center;
+}
+
+body{
+	color: #42464c;
+	font-family: 'Work Sans', sans-serif;
+}
+
+#wrapper{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: flex;
+}
+
+#audioplayer{
+	height: 60px;
+}
+
+#pButton{
+    height: 60px;
+    border: none;
+		background: transparent;
+    float: left;
+}
+
+.fa-play-circle-o, .fa-pause-circle-o {
+  color: #42464c;
+}
+
+.fa-floppy-o {
+  margin-left: 10px;
+  color: #42464c;
+}
